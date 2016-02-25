@@ -25,16 +25,16 @@ function runMeteor(){
   });
 
   meteor.stdout.on('data', function startTesting(data) {
-    var data = data.toString();
-    var match = data.match(/ App running at: .+/);
+    var data2 = data.toString();
+    var match = data2.match(/ App running at: .+/);
     if(match) {
       var url = match[0].substr(17);
       console.log('Starting Tinytest...');
       meteor.stdout.removeListener('data', startTesting);
       runTestSuite(url);
-    } 
+    }
   });
-};
+}
 
 function runTestSuite(url) {
   var phantomjs = spawn('phantomjs', ['./.phantomRunner.js', url]);
@@ -45,4 +45,4 @@ function runTestSuite(url) {
     meteor.kill('SIGQUIT');
     process.exit(code);
   });
-};
+}

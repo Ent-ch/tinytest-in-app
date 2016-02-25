@@ -20,8 +20,8 @@ page.onConsoleMessage = function (message) {
       case 'TINYTEST COMPLETE':
         phantom.exit(passed ? 0 : 1);
         break;
-    };
-  };
+    }
+  }
 };
 
 console.log("Running Meteor tests in PhantomJS...");
@@ -29,9 +29,8 @@ page.open(url, function(status){
   if(status !== 'success'){
     console.log('Cannot load app at', url);
     phantom.exit(1);
-  };
+  }
   tinytestActive = true;
-  page.evaluate(function(){
-    runTinytest();
-  });
+  console.log(page.plainText);
+  phantom.exit();
 });
