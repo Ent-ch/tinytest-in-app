@@ -17,17 +17,17 @@ $ meteor add tinytest numtel:tinytest-in-app
 
 ## Easy way
 ###Basic steeps
-meteor add tinytest
-meteor create --package leaderboard-tinytests
+1. meteor add tinytest
+2. meteor create --package leaderboard-tinytests
 
 ###Testing in browser
-meteor test-packages
+3. meteor test-packages
 
 ###Testing in console
-npm i -g phantomjs
-wget https://raw.github.com/Ent-ch/tinytest-in-app/master/.startTest.js
-wget https://raw.github.com/Ent-ch/tinytest-in-app/master/.phantomRunner.js
-nodejs .startTest.js test-packages
+3. npm i -g phantomjs
+4. wget https://raw.github.com/Ent-ch/tinytest-in-app/master/.startTest.js
+5. wget https://raw.github.com/Ent-ch/tinytest-in-app/master/.phantomRunner.js
+6. nodejs .startTest.js test-packages
 
 ## Quick start
 
