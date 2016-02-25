@@ -31,6 +31,10 @@ page.open(url, function(status){
     phantom.exit(1);
   }
   tinytestActive = true;
-  console.log(page.plainText);
-  phantom.exit();
+  console.log('Test page loaded...');
+  //TODO check for interval when tests are over
+  setTimeout(function() {
+    console.log(page.plainText);
+    phantom.exit();
+  }, 3000);
 });
