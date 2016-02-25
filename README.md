@@ -8,13 +8,6 @@ Does not use Velocity so the tests do NOT run in a mirror. You must clean up
 any data you create. If you would like to use Velocity with Tinytest in your
 app, see my [numtel:velocity-tinytest package](https://github.com/numtel/velocity-tinytest).
 
-## Installation
-The `tinytest` package is also required. Install both using this command:
-
-```bash
-$ meteor add tinytest numtel:tinytest-in-app
-```
-
 ## Easy way
 ###Basic steeps
 ```bash
